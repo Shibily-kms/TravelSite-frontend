@@ -1,0 +1,40 @@
+.explore {
+    background-color: rgb(175, 175, 175);
+    position: relative;
+
+    .boader {
+        width: 100%;
+        height: 450px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            color: white;
+            text-align: center;
+
+            h1 {
+                font-size: 60px;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-family: 'Lobster', cursive;
+                font-weight: normal;
+            }
+        }
+    }
+    .search-div{
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%,0);
+        -webkit-transform: translate(-50%,0);
+        -moz-transform: translate(-50%,0);
+        -ms-transform: translate(-50%,0);
+        -o-transform: translate(-50%,0);
+        bottom: -50px;
+}
+}
