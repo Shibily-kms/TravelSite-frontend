@@ -3,6 +3,7 @@ import './home.scss'
 import Header from '../../components/user/header/Header'
 import Explore from '../../components/user/explore/Explore'
 import Holiday from '../../components/user/holiday/Holiday'
+import VideoWhall from '../../components/user/videoWhall/VideoWhall'
 
 function Home() {
     return (
@@ -13,8 +14,11 @@ function Home() {
             <div className='explore-div'>
                 <Explore />
             </div>
-            <div className="holiday">
+            <div className="holiday-div">
                 <Holiday />
+            </div>
+            <div className="video-div">
+                <VideoWhall/>
             </div>
 
         </div>
