@@ -6,6 +6,7 @@ import Holiday from '../../components/user/holiday/Holiday'
 import VideoWhall from '../../components/user/videoWhall/VideoWhall'
 import Popular from '../../components/user/popular/Popular'
 import Booking from '../../components/user/booking/Booking'
+import Review from '../../components/user/review/Review'
 
 function Home() {
     return (
@@ -20,13 +21,16 @@ function Home() {
                 <Holiday />
             </div>
             <div className="video-div">
-                <VideoWhall/>
+                <VideoWhall />
             </div>
             <div className="popular-div">
-                <Popular/>
+                <Popular />
             </div>
             <div className="booking">
-                <Booking/>
+                <Booking />
+            </div>
+            <div className="review-div">
+                <Review />
             </div>
 
         </div>
