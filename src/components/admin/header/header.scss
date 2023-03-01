@@ -1,0 +1,86 @@
+.admin-header {
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .section-one {
+        display: flex;
+        padding: 10px 15%;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+        background-color: rgb(0, 0, 160);
+
+        .left>h2 {
+            font-family: 'Carter One', cursive;
+            color: white;
+            font-weight: normal;
+        }
+
+        .right {
+            ul {
+                display: flex;
+                list-style: none;
+
+                li {
+
+                    margin: 0 9px;
+                    font-size: 13px;
+
+                    a {
+                        color: white;
+                    }
+
+                    .active {
+
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1115px) {
+        .section-one {
+            display: block;
+
+            div {
+                justify-content: center;
+            }
+
+            .left,
+            .right {
+                margin: 3px 0;
+            }
+        }
+
+        .section-two {
+            display: block;
+            text-align: center;
+
+            .right>ul {
+                justify-content: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .section-one {
+
+            padding: 9px 5%;
+
+
+        }
+
+        .section-two {
+
+            padding: 9px 5%;
+
+            ul {
+                padding: 0;
+            }
+        }
+    }
+}
