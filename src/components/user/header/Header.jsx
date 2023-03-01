@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.scss'
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
@@ -7,8 +7,12 @@ import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn";
 import { FaGlobe } from "@react-icons/all-files/fa/FaGlobe";
 import { FaRegUser } from "@react-icons/all-files/fa/FaRegUser";
 import { IoMdArrowDropdown } from "@react-icons/all-files/io/IoMdArrowDropdown";
+import Auth from '../../../pages/user/auth/Auth';
 
 function Header() {
+
+    const [show, setShow] = useState(false)
+
     return (
         <header>
             {/* Top Bar */}
@@ -57,9 +61,12 @@ function Header() {
                         <li>My Bookings</li>
                         <li>About Us</li>
                         <li>Booking Support</li>
-                        <li>Agent Login</li>
+                        <li onClick={() => setShow(true)}>Agent Login</li>
                     </ul>
                 </div>
+            </div>
+            <div className="login-div">
+                {show ? <Auth setShow={setShow} /> : ""}
             </div>
         </header>
     )
