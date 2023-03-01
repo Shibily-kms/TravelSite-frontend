@@ -17,8 +17,10 @@ function SignUp({ setSignUp }) {
             <div className="form">
               <h3>Let’s get started!</h3>
               <form action="">
+                <input type="text" name='fullName' placeholder='Full Name' />
                 <input type="email" name='emailId' placeholder='Email' />
                 <input type="password" name='password' placeholder='Password' />
+                <input type="password" name='cpassword' placeholder='Confirm Password' />
                 <input type="number" name='mobile' placeholder='+91 MobileNumber' />
                 <div className="checkbox">
                   <input type="checkbox" id='check' name='check' />
