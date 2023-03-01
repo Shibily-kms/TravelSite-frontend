@@ -39,8 +39,6 @@ function Search() {
                 </div>
                 <div className="search-section">
                     <div className="one">
-
-
                         <div className="input-text">
                             <p>COK</p>
                             <input type="text" placeholder='Cochin International Airport' />
@@ -51,8 +49,6 @@ function Search() {
                         </div>
                     </div>
                     <div className="two">
-
-
                         <div className="input-text">
                             <div>
                                 <BsCalendar3 />

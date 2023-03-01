@@ -3,8 +3,9 @@
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 50px;
     position: relative;
+    padding: 0 20px;
+    padding-top: 50px;
 
     .h2,
     h3,
@@ -45,6 +46,12 @@
             justify-content: center;
             align-items: center;
             font-size: 24px;
+        }
+    }
+
+    @media screen and (max-width:950px) {
+        .video{
+            width: 80%;
         }
     }
 }

@@ -28,6 +28,9 @@ header{
             .social, .account{
                 margin: 0 15px;
             }
+            .account>.icon>span{
+                margin-left: 10px;
+            }
         }
     }
 
@@ -71,6 +74,22 @@ header{
             text-align: center;
             .right>ul{
               justify-content: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .section-one{
+           
+            padding: 9px 5%;
+            
+            
+        }
+        .section-two{
+            
+            padding: 9px 5%;
+            ul{
+                padding: 0;
             }
         }
     }
