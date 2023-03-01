@@ -6,7 +6,9 @@ import Auth from '../pages/admin/auth/Auth'
 
 
 
+
 function Admin() {
+
     return (
         <Routes>
             <Route path='/login' element={<Auth />} />
@@ -14,7 +16,6 @@ function Admin() {
             <Route path='/perfect-holiday' element={<Holiday />} />
             <Route path='/video' element={<Dashboard />} />
             <Route path='/popular-flight' element={<Dashboard />} />
-
         </Routes>
     )
 }
