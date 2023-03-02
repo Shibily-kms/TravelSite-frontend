@@ -5,7 +5,9 @@ import { toast } from 'react-toastify'
 import axios from '../../../config/axios'
 import { login } from '../../../redux/features/user/authSlice'
 import { useDispatch } from 'react-redux'
-function Login({ setShow, setSignUp }) {
+
+
+function Login({ setForgot, setShow, setSignUp }) {
     const [form, setForm] = useState({ email: "", password: "" })
     const dispatch = useDispatch()
     const handleChange = (e) => {
@@ -45,7 +47,7 @@ function Login({ setShow, setSignUp }) {
                             <form action="" onSubmit={handleSubmit}>
                                 <input type="email" name='email' placeholder='Email' onChange={handleChange} />
                                 <input type="password" name='password' placeholder='Password' onChange={handleChange} />
-                                <p>Forgot password ?</p>
+                                <p onClick={() => setForgot(true)}>Forgot password ?</p>
                                 <button type='submit'>Submit</button>
                             </form>
                             <p>New User ? Click Here to <span onClick={() => setSignUp(true)}>Register</span></p>
