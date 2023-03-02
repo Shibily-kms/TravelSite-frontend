@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './popular.scss'
 import Card from '../card/Card'
 import image1 from '../../../assets/images/a1.png'
@@ -7,37 +7,19 @@ import image3 from '../../../assets/images/a3.png'
 import image4 from '../../../assets/images/a4.png'
 import image5 from '../../../assets/images/a5.png'
 import image6 from '../../../assets/images/a6.png'
+import axios from '../../../config/axios'
+
 function Popular() {
-    const [card, setCard] = useState([
-        {
-            Id: 1,
-            image: image1,
-        },
-        {
-            Id: 2,
-            image: image2,
-        },
-        {
-            Id: 3,
-            image: image3,
-        },
-        {
-            Id: 4,
-            image: image4,
-        },
-        {
-            Id: 5,
-            image: image5,
-        },
-        {
-            Id: 6,
-            image: image6,
-        },
-        {
-            Id: 7,
-            image: image1,
-        },
-    ])
+    const [images] = useState([image1, image2, image3, image4, image5, image6])
+    const [card, setCard] = useState([])
+
+    useEffect(() => {
+        axios.get('/popular-flight').then((response) => {
+            console.log(response);
+            setCard(response.data.data)
+        })
+    }, [])
+
     return (
         <div className='popular'>
             <div className="title">
@@ -50,8 +32,8 @@ function Popular() {
                 <button className='normal'>Domestic</button>
             </div>
             <div className="slide">
-                {card.map((value)=>{
-                   return <Card image={value.image} key={value.Id}/>
+                {card.map((value,index) => {
+                    return <Card key={value.Id} title={value.title} price={value.price} image={images[index + 1]} />
 
                 })}
             </div>
