@@ -4,20 +4,12 @@ import RoundCard from '../round-card/RoundCard'
 import Card from '../card/Card'
 import roundOne from '../../../assets/images/r1.png'
 import roundTwo from '../../../assets/images/r2.png'
-import image1 from '../../../assets/images/a1.png'
-import image2 from '../../../assets/images/a2.png'
-import image3 from '../../../assets/images/a3.png'
-import image4 from '../../../assets/images/a4.png'
-import image5 from '../../../assets/images/a5.png'
-import image6 from '../../../assets/images/a6.png'
 import axios from '../../../config/axios'
 
 function Holiday() {
     const [card, setCard] = useState([])
-    const [images] = useState([image1, image2, image3, image4, image5, image6])
     useEffect(() => {
         axios.get('/perfect-holiday').then((response) => {
-            console.log(response);
             setCard(response.data.data)
         })
     }, [])
@@ -32,7 +24,7 @@ function Holiday() {
             <div className="card-div">
                 <RoundCard text="Dubai" image={roundOne} />
                 {card.map((value, index) => {
-                    return <Card key={value.Id} title={value.title} price={value.price} image={images[index + 1]} />
+                    return <Card key={value.Id} title={value.title} price={value.price} image={value.image} />
                 })}
                 <RoundCard text="Thailand" image={roundTwo} />
             </div>

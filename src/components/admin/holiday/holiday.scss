@@ -54,7 +54,7 @@
                 background-color: #ddd;
             }
 
-            button{
+            button {
                 background-color: rgb(165, 0, 0);
                 color: white;
                 font-size: 14px;
@@ -65,7 +65,11 @@
                 -moz-border-radius: 5px;
                 -ms-border-radius: 5px;
                 -o-border-radius: 5px;
-}
+            }
+
+            img {
+                width: 50px;
+            }
 
         }
     }

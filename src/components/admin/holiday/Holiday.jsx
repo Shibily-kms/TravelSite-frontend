@@ -46,7 +46,7 @@ function Holiday() {
                             {data.map((value, index) => {
                                 return <tr>
                                     <td>{index + 1}</td>
-                                    <td> <img src={value?.image ? 'http://localhost:8000/images/' + value.image : ''} /> </td>
+                                    <td> <img src={value?.image ? 'http://localhost:8000/images/' + value.image : 'null'} /> </td>
                                     <td>{value.title}</td>
                                     <td>{value.price}</td>
                                     <td><button onClick={() => handleDelete(value._id)}>Delete</button></td>

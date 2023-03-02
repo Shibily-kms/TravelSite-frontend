@@ -1,11 +1,11 @@
 import React from 'react'
 import './card.scss'
 
-function Card({image,title,price}) {
+function Card({ image, title, price }) {
     return (
         <div className='card'>
             <div className="boader" >
-                <img src={image} alt="" />
+                <img src={'http://localhost:8000/images/' + image} alt="" />
                 <div className="box">
                     <div className="left">
                         <p>{title}</p>

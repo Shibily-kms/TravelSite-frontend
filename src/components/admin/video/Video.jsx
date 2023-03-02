@@ -14,12 +14,19 @@ function Video() {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (form !== '') {
+            console.log('start');
             const data = new FormData();
             const filename = Date.now() + form.name;
             data.append("name", filename);
-            data.append("video", form);
-            axios.post('/video', data).then((response)=>{
-
+            data.append("file", form);
+            console.log(data, 'data');
+            axios.post('/admin/video', data).then((response) => {
+                if (response) {
+                    toast.success(response.data.message)
+                    setForm('')
+                }
+            }).catch((error) => {
+                toast.error(error.response.data.message)
             })
         } else {
             toast.error('Choose a video')
@@ -40,7 +47,7 @@ function Video() {
             </div>
 
             <div className="video-show">
-                <video src=""></video>
+                <video controls loop autoPlay={true} muted src='http://localhost:8000/Video/WhallVideo.mp4'></video>
             </div>
         </div>
     )

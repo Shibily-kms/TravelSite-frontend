@@ -14,7 +14,6 @@ export const adminAuthSlice = createSlice({
             state.admin = null
         },
         login: (state, action) => {
-            console.log(action);
             state.admin = action.payload
         }
     }

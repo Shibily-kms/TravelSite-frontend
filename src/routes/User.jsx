@@ -15,7 +15,6 @@ function User() {
                     Authorization: `Bearer ${localStorage.getItem('userToken')}`
                 }
             }).then((response) => {
-                console.log(user);
                 dispatch(setUser(response.data.user))
             })
         }

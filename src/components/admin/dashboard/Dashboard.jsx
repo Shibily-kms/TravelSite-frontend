@@ -4,7 +4,12 @@ import Header from '../header/Header'
 function Dashboard() {
     return (
         <div>
-            <Header />
+            <div>
+                <Header />
+            </div>
+            <div className='content'>
+                <h1>Home Page</h1>
+            </div>
         </div>
     )
 }

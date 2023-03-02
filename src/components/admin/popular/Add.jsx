@@ -28,7 +28,6 @@ function Add({ setShow, setData }) {
             data.append("file", form.image);
             form.image = filename
             axios.post('/admin/popular-flight/image', data).then((response) => {
-                console.log('yes');
                 axios.post('/admin/popular-flight', form).then((result) => {
                     setData((state) => [result.data.data, ...state])
                     setShow(false)

@@ -14,9 +14,7 @@ function VideoWhall() {
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula eget dolor. Aenean massa. Cum sociis the</p>
             </div>
             <div className="video" style={{ backgroundImage: `url(${video})` }}>
-                <div className="play">
-                    <BsFillPlayFill/>
-                </div>
+                <video controls loop muted src="http://localhost:8000/Video/WhallVideo.mp4"></video>
             </div>
 
         </div>
