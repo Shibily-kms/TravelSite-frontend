@@ -9,7 +9,7 @@ function Auth({ setShow }) {
         <div className='auth' >
             <div className="shadow" onClick={() => setShow(false)}></div>
             <div className='pages'>
-                {signUp ? <SignUp setSignUp={setSignUp} /> : <Login setSignUp={setSignUp} />}
+                {signUp ? <SignUp setSignUp={setSignUp} /> : <Login setShow={setShow} setSignUp={setSignUp} />}
             </div>
         </div>
     )

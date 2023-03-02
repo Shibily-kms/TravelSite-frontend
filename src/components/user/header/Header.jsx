@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './header.scss'
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
@@ -8,10 +8,15 @@ import { FaGlobe } from "@react-icons/all-files/fa/FaGlobe";
 import { FaRegUser } from "@react-icons/all-files/fa/FaRegUser";
 import { IoMdArrowDropdown } from "@react-icons/all-files/io/IoMdArrowDropdown";
 import Auth from '../../../pages/user/auth/Auth';
+import { useSelector, useDispatch } from 'react-redux';
+import { logOut } from '../../../redux/features/user/authSlice'
 
 function Header() {
-
+    const { user } = useSelector((state) => state.userAuth)
     const [show, setShow] = useState(false)
+    const dispatch = useDispatch()
+    useEffect(() => {
+    }, [user])
 
     return (
         <header>
@@ -61,7 +66,8 @@ function Header() {
                         <li>My Bookings</li>
                         <li>About Us</li>
                         <li>Booking Support</li>
-                        <li onClick={() => setShow(true)}>Agent Login</li>
+                        <li onClick={() => setShow(true)}>{user ? user.fullName : "Agent Login"}</li>
+                        {user ? <li onClick={() => dispatch(logOut())}>LogOut</li> : ""}
                     </ul>
                 </div>
             </div>
